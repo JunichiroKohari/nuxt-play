@@ -1,5 +1,13 @@
 <template lang="pug">
-  nuxt-link(to="/users") Usres page
+  div
+    nuxt-link(
+      to="/users"
+    ) Usres page
+    br
+    nuxt-link(
+      to="/products"
+    ) Products page
+
 </template>
 
 <script>
