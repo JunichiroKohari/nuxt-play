@@ -1,6 +1,7 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
+  ssr: false,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - nuxt',
@@ -45,9 +46,34 @@ export default {
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
+    meta: {
+      name: 'test'
+    },
     manifest: {
-      lang: 'en'
-    }
+      lang: 'ja'
+    },
+    workbox: {
+      // dev: true,
+      // runtimeCaching: [
+      //   {
+      //     urlPattern: 'http://localhost/v1/test',
+      //     handler: 'NetworkFirst',
+      //     strategyOptions: {
+      //       cacheName: 'api-cache',
+            // cacheExpiration: {
+            //   maxAgeSeconds: 60 * 60 * 24 * 7,
+            //   maxEntries: 30
+            // }
+          // },
+      //     strategyPlugins: [{
+      //        use: 'Expiration',
+      //        config: {
+      //          maxAgeSeconds: 300
+      //        }
+      //      }]
+      //   },
+      // ],
+    },
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
