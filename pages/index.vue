@@ -7,6 +7,10 @@
     nuxt-link(
       to="/products"
     ) Products page
+    br
+    nuxt-link(
+      to="/vuetify"
+    ) Vuetify page
 
 </template>
 
