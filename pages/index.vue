@@ -11,6 +11,10 @@
     nuxt-link(
       to="/vuetify"
     ) Vuetify page
+    br
+    nuxt-link(
+      to="/pug"
+    ) Pug page
 
 </template>
 
@@ -38,10 +42,10 @@ export default {
   methods: {
     download () {
       var fname = "test.jpeg"
-        if (window.navigator.msSaveBlob) { 
+        if (window.navigator.msSaveBlob) {
             console.log("#-msSaveBlob")
-            window.navigator.msSaveBlob(this.blobData, fname ); 
-            window.navigator.msSaveOrOpenBlob(this.blobData, fname ); 
+            window.navigator.msSaveBlob(this.blobData, fname );
+            window.navigator.msSaveOrOpenBlob(this.blobData, fname );
             const bloburl = window.URL.createObjectURL(this.blobData);
         } else {
             console.log("#-msSaveBlob-false")
@@ -49,7 +53,7 @@ export default {
             document.getElementById("donwloadbtn").href = bloburl;
             // console.log(document.getElementById("donwloadbtn").href)
             console.log(bloburl)
-        } 
+        }
     }
   }
 }
